@@ -1,0 +1,23 @@
+{
+  "name": "csv-impoter-ai-crm",
+  "version": "1.0.0",
+  "description": "AI-Powered CSV importer and AI CRM backend for GrowEasy",
+  "license": "ISC",
+  "author": "aunrxg",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.1.0",
+    "tsx": "^4.23.0",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
