@@ -9,6 +9,7 @@ const envSchema = z.object({
   GROQ_MODEL: z.string().default("llama-3.3-70b-versatile"),
   NODE_ENV: z.enum(["dev", "prod", "test"]),
   CORS_ORIGIN: z.string().default("*"),
+  MAX_FILE_SIZE_MB: z.string().default("10"),
 });
 
 const parsed = envSchema.safeParse(process.env);
@@ -25,4 +26,5 @@ export const env = {
   GROQ_MODEL: parsed.data.GROQ_MODEL,
   NODE_ENV: parsed.data.NODE_ENV,
   CORS_ORIGIN: parsed.data.CORS_ORIGIN,
+  MAX_FILE_SIZE_MB: Number(parsed.data.MAX_FILE_SIZE_MB),
 };
