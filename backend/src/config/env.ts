@@ -23,7 +23,7 @@ if (!parsed.success) {
 }
 
 export const env = {
-  PORT: Number(parsed.data.CORS_ORIGIN),
+  PORT: Number(parsed.data.PORT),
   GROQ_API_KEY: parsed.data.GROQ_API_KEY,
   GROQ_MODEL: parsed.data.GROQ_MODEL,
   NODE_ENV: parsed.data.NODE_ENV,

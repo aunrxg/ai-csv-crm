@@ -28,6 +28,6 @@ app.use("/api/import", importLimiter, importRouter);
 app.use(notFoundHandler);
 app.use(errorHandler);
 
-app.listen(4000, () => {
+app.listen(env.PORT, () => {
   console.log(`APP is listening to port ${env.PORT} (${env.NODE_ENV})`)
 });
