@@ -10,6 +10,8 @@ const envSchema = z.object({
   NODE_ENV: z.enum(["dev", "prod", "test"]),
   CORS_ORIGIN: z.string().default("*"),
   MAX_FILE_SIZE_MB: z.string().default("10"),
+  BATCH_SIZE: z.string().default("15"),
+  BATCH_CONCURRENCY: z.string().default("3"),
 });
 
 const parsed = envSchema.safeParse(process.env);
@@ -27,4 +29,6 @@ export const env = {
   NODE_ENV: parsed.data.NODE_ENV,
   CORS_ORIGIN: parsed.data.CORS_ORIGIN,
   MAX_FILE_SIZE_MB: Number(parsed.data.MAX_FILE_SIZE_MB),
+  BATCH_SIZE: Number(parsed.data.BATCH_SIZE),
+  BATCH_CONCURRENCY: Number(parsed.data.BATCH_CONCURRENCY),
 };
