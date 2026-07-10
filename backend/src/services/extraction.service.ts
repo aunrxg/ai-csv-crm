@@ -159,7 +159,7 @@ export async function extractCrmRecords(rows: RawCsvRow[]): Promise<ImportRespon
 
   return {
     success: true,
-    totalRow: rows.length,
+    totalRows: rows.length,
     totalImported: records.length,
     totalSkipped: skipped.length,
     records,
