@@ -1,6 +1,6 @@
 import { ApiErrorResponse, ImportResponse, PreviewResponse } from "@/types";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://localhost:4000";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 
 export class ApiError extends Error {
   constructor(message: string, public readonly code: string) {

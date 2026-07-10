@@ -53,7 +53,6 @@ importRouter.post(
 
       const rows = parseCsvBuffer(req.file.buffer);
       const result = await extractCrmRecords(rows);
-
       res.json(result);
     } catch (err) {
       next(err);

@@ -66,7 +66,7 @@ export interface ExtractionResult {
 
 export interface ImportResponse {
   success: boolean;
-  totalRow: number;
+  totalRows: number;
   totalImported: number;
   totalSkipped: number;
   records: CrmRecord[];
